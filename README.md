@@ -51,6 +51,24 @@ Run a match on the table.
 Much easier on the eyes then a bunch of if or switch stmts. 
 
 
+objects
+-------
+
+Because the column names have been defined, you can also run a decision on an object. eg
+
+    var person = {
+      first: 'Ryan',
+      last: 'Ramage',
+      type: 'b',
+      count: 2,
+      applied: true,
+      emotion: 'happy'
+    }
+
+    table.run(person, function (err, category) {
+      t.equal(category, 13, 'we get the correct category')
+    })
+
 Persist
 =======
 
