@@ -13,7 +13,8 @@ usage
 -----
 
 
-
+    var DecisionTable = require('decision-table')
+    
     var table = new DecisionTable(
       ['type', 'count', 'applied', 'emotion'],
       [
