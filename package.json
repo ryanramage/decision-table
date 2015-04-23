@@ -1,6 +1,6 @@
 {
   "name": "decision-table",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Compact decision logic in a table-like layout",
   "main": "index.js",
   "scripts": {
