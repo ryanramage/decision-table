@@ -14,7 +14,7 @@ usage
 
 
     var DecisionTable = require('decision-table')
-    
+
     var table = new DecisionTable(
       ['type', 'count', 'applied', 'emotion'],
       [
@@ -43,7 +43,7 @@ The second arg is the table. It is an array of rows. Just fill it up with all
 the permutations of values that you need to decide on. The last value is the return value
 for a match.
 
-    table.run(['b', 2, true, 'happy'], function (err, category) {
+    table.decide(['b', 2, true, 'happy'], function (err, category) {
       t.equal(category, 13, 'we get the correct category')
     })
 
@@ -66,7 +66,7 @@ Because the column names have been defined, you can also run a decision on an ob
       emotion: 'happy'
     }
 
-    table.run(person, function (err, category) {
+    table.decide(person, function (err, category) {
       t.equal(category, 13, 'we get the correct category')
     })
 

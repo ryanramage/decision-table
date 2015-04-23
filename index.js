@@ -31,7 +31,7 @@ DecisionTable.prototype.addRow = function (row) {
   this.db.put(row, val)
 }
 
-DecisionTable.prototype.run = function (thing, cb) {
+DecisionTable.prototype.decide = function (thing, cb) {
   var key = []
 
   if (Array.isArray(thing)) {

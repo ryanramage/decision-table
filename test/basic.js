@@ -33,7 +33,7 @@ var category_table = new DecisionTable(
 )
 
 test('decision-table example, with object access', function (t) {
-  category_table.run(person, function (err, category) {
+  category_table.decide(person, function (err, category) {
     t.error(err)
     t.equal(category, 13, 'we get the correct category')
     t.end()
@@ -41,7 +41,7 @@ test('decision-table example, with object access', function (t) {
 })
 
 test('decision-table example, with array access', function (t) {
-  category_table.run(['b', 2, true, 'happy'], function (err, category) {
+  category_table.decide(['b', 2, true, 'happy'], function (err, category) {
     t.error(err)
     t.equal(category, 13, 'we get the correct category')
     t.end()
@@ -51,7 +51,7 @@ test('decision-table example, with array access', function (t) {
 test('add a row', function (t) {
   category_table.addRow(['c', 1, false, 'nervous', 55])
 
-  category_table.run(['c', 1, false, 'nervous'], function (err, category) {
+  category_table.decide(['c', 1, false, 'nervous'], function (err, category) {
     t.error(err)
     t.equal(category, 55, 'we get the correct category')
     t.end()
