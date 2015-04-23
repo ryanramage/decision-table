@@ -4,11 +4,12 @@
   "description": "Compact decision logic in a table-like layout",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/tap test/*.js"
+    "test": "standard && ./node_modules/.bin/tap test/*.js"
   },
   "author": "Ryan Ramage",
   "license": "ISC",
   "devDependencies": {
+    "standard": "^3.7.1",
     "tap": "^0.7.1",
     "tape": "^4.0.0"
   },
